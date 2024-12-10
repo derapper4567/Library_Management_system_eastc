@@ -5,8 +5,14 @@
 from frappe.model.document import Document
 
 
+#class Librarymember(Document):
+	#def before_save(self):
+		#self.full_name = f'{self.first_name} {self.last_name or ""}'
+
 class Librarymember(Document):
-	def before_save(self):
-		self.Full_name = f'{self.First_name} {self.Last_name or ""}'
+    def validate(self):
+        # Handle cases where last_name might be empty or None
+        self.full_name = f"{self.first_name.strip()} {self.last_name.strip() if self.last_name else ''}".strip()
+
  
 
