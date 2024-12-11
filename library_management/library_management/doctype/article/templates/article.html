@@ -4,22 +4,26 @@
 
 {% block page_content %}
 
-![{{ title }}]({{ image }})
+{{ title }}<br><img src="{{image}}" alt="Missing"/><br>
 
-{{ title }}
-===========
 
 By {{ author }}
+
+<P>
 
 {%- if status == 'Available' -%}
     Available
 {%- elif status == 'Issued' -%}
     Issued
 {%- endif -%}
+</P>
 
-Publisher: **{{ publisher }}**  
+Publisher: **{{ publisher }}**        
+
+<br>
 ISBN: **{{ isbn }}**
-
+<P>
 {{ description }}
+</P>
 
 {% endblock %}

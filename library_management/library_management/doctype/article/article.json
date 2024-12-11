@@ -7,15 +7,18 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "image",
+  "column_break_akpg",
   "article_name",
   "author",
-  "image",
+  "route",
+  "column_break_pwye",
+  "publisher",
   "isbn",
   "status",
-  "publisher",
-  "description",
-  "route",
-  "published"
+  "published",
+  "section_break_etrm",
+  "description"
  ],
  "fields": [
   {
@@ -68,13 +71,25 @@
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published"
+  },
+  {
+   "fieldname": "column_break_pwye",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_etrm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_akpg",
+   "fieldtype": "Column Break"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2024-12-10 18:34:13.563579",
+ "modified": "2024-12-11 11:16:08.427882",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Article",
@@ -116,7 +131,7 @@
   }
  ],
  "quick_entry": 1,
- "route": "Route",
+ "route": "articles",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
