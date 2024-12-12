@@ -6,19 +6,29 @@ A Library Management System (LMS) built using the Frappe Framework. This system 
 Features
 
 -Book Management: Add, update, or delete books in the library system.
+
 -User Management: Manage user information and track their borrowing history.
+
 -Borrowing System: Track books borrowed by users, including due dates and overdue books.
+
 -Return System: Mark books as returned and update the system's inventory.
+
 -Search Functionality: Search for books by title, author, or genre.
+
 -Reports: Generate reports for overdue books and borrowing statistics.
 
 Tech Stack
 
 -Framework: Frappe Framework
+
 -Backend: Python (Frappe)
+
 -Frontend: HTML, CSS, JavaScript (Frappe's web interface)
+
 -Database: MariaDB (used by Frappe)
+
 -Authentication: Integrated user management with Frappe's built-in authentication system
+
 -Version Control: Git and GitHub
 
 Setup and Installation
@@ -27,9 +37,13 @@ To get started with the Library Management System, follow these instructions to 
 
 Prerequisites:
     Python 3.7+: Make sure you have Python installed.
+
     Node.js: Frappe uses Node.js for building frontend assets.
+
     MariaDB: Frappe uses MariaDB as the default database.
+
     Redis: Required for caching and queuing in Frappe.
+
     Yarn: Frappe uses Yarn for managing frontend dependencies.
 
 You can follow the official Frappe installation guide to install these dependencies.
@@ -45,6 +59,7 @@ Follow these:
     bench start
 
 Environmental Configuration:
+
 create .env file 
 
 Usage
@@ -79,7 +94,9 @@ This project is licensed under the MIT License – see the LICENSE file for deta
 Acknowledgments
 
 Inspired by library management systems and ERPNext.
+
 Thanks to the Frappe community for providing an excellent framework.
+
 Special thanks to  Aakvatech Company Limited and the open-source contributors for their valuable tools and libraries.
 
 
