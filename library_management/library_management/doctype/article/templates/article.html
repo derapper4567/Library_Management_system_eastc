@@ -1,29 +1,42 @@
 
-
 {% extends "templates/web.html" %}
+
+<head>
+<link rel="stylesheet" href="style.css" />
+<title>{% block title %}EASTC LIBRARY MANAGEMENT SYSTEM{% endblock %}</title>
+</head>
+
+
 
 {% block page_content %}
 
-{{ title }}<br><img src="{{image}}" alt="Missing"/><br>
+<div class="py-20 row">
+    <div class="col-sm-2">
+      <img alt="{{ title }}" src="{{ image }}"/>
+    </div>
+    <div class="col">
+      <h1>{{ title }}</h1>
+      <p class="lead">By {{ author }}</p>
+      <div>
+        {%- if status == 'Available' -%}
+          <span class="badge badge-success">Available</span>
+        {%- elif status == 'Issued' -%}
+          <span class="badge badge-primary">Issued</span>
+        {%- endif -%}
+      </div>
+  
+      <div class="mt-4">
+        <div>Publisher: <strong>{{ publisher }}</strong></div>
+        <div>ISBN: <strong>{{ isbn }}</strong></div>
+      </div>
+      <p>{{ description }}</p>
+       </div>
+  </div>
+{%endblock%} 
 
 
-By {{ author }}
-
-<P>
-
-{%- if status == 'Available' -%}
-    Available
-{%- elif status == 'Issued' -%}
-    Issued
-{%- endif -%}
-</P>
-
-Publisher: **{{ publisher }}**        
-
-<br>
-ISBN: **{{ isbn }}**
-<P>
-{{ description }}
-</P>
-
-{% endblock %}
+<div id="footer">
+    {% block footer %}
+    &copy; Copyright 2024 by <a href="http://github.com/derapper4567/">Aakvatech</a>.
+    {% endblock %}
+</div>
