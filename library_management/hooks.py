@@ -5,6 +5,21 @@ app_description = "Library Management System"
 app_email = "ashakisonga2022@gmail.com"
 app_license = "mit"
 
+
+
+
+from frappe import _
+
+def on_login():
+    if not frappe.session.user == "Administrator":
+        frappe.local.response["type"] = "redirect"
+        frappe.local.response["location"] = "/desk#articles"
+
+doc_events = {
+    "User ": {
+        "on_login": "library_management.hooks.on_login" 
+    }
+}
 # Apps
 # ------------------
 
